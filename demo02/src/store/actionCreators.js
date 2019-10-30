@@ -1,27 +1,23 @@
-import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM, GET_LIST } from './actionTypes'
+import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM, GET_LIST } from './actionTypes';
 import axios from 'axios'
-
-// 文本框值改变
-export const changInputAction = (value) => ({
+export const changeInputAction = (value) => ({
     type: CHANGE_INPUT,
     value
 })
-// 添加数据
 export const addItemAction = () => ({
     type: ADD_ITEM
 })
-// 删除数据
+
 export const deleteItemAction = (index) => ({
     type: DELETE_ITEM,
     index
 })
 
-// 获取数据
 export const getListAction = (data) => ({
     type: GET_LIST,
     data
 })
-// 获取LIST数据
+
 export const getTodoList = (dispatch) => {
     return (dispatch) =>{
         // dispatch redux-thunk 自动生成
@@ -34,5 +30,4 @@ export const getTodoList = (dispatch) => {
                 }
             })
     }
-    
 }
